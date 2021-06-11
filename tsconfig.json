@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "lib": [
+      "ES2020"
+    ],
+    "watch": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "sourceMap": false
+  },
+  "include": [
+    "src",
+  ]
+}
