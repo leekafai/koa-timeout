@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 const timeout = (millionSecond) => {
     const mdw = (ctx, next) => __awaiter(void 0, void 0, void 0, function* () {
         const ms = +millionSecond;
@@ -34,4 +33,4 @@ const timeout = (millionSecond) => {
     });
     return mdw;
 };
-exports.default = timeout;
+module.exports = timeout;

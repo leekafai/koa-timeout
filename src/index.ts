@@ -3,7 +3,7 @@ import { Middleware } from "@koa/router"
 /**
  * timeout middleware for koa
  */
-const timeout = (millionSecond: number): Middleware => {
+const timeout = (millionSecond?: number): Middleware => {
   const mdw = async (ctx: Context, next: Next) => {
 
     const ms = +millionSecond
@@ -30,4 +30,5 @@ const timeout = (millionSecond: number): Middleware => {
   }
   return mdw
 }
-export default timeout
+
+export = timeout
