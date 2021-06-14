@@ -4,13 +4,11 @@ import { Middleware } from "@koa/router"
  * timeout middleware for koa
  */
 const timeout = (millionSecond?: number): Middleware => {
+  const TIMEOUT = Math.random()
+  const ms = +millionSecond
   const mdw = async (ctx: Context, next: Next) => {
-
-    const ms = +millionSecond
-
     if (!isNaN(ms) && ms >= 1) {
       let timer
-      const TIMEOUT = Math.random()
       const timeout = new Promise((resolve) => {
         timer = setTimeout(() => {
           resolve(TIMEOUT)
@@ -24,7 +22,6 @@ const timeout = (millionSecond?: number): Middleware => {
       }
 
     } else {
-      console.log('through')
       await next()
     }
   }

@@ -9,11 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const timeout = (millionSecond) => {
+    const TIMEOUT = Math.random();
+    const ms = +millionSecond;
     const mdw = (ctx, next) => __awaiter(void 0, void 0, void 0, function* () {
-        const ms = +millionSecond;
         if (!isNaN(ms) && ms >= 1) {
             let timer;
-            const TIMEOUT = Math.random();
             const timeout = new Promise((resolve) => {
                 timer = setTimeout(() => {
                     resolve(TIMEOUT);
@@ -27,7 +27,6 @@ const timeout = (millionSecond) => {
             }
         }
         else {
-            console.log('through');
             yield next();
         }
     });
