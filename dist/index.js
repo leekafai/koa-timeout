@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * timeout middleware for koa
+ */
 const timeout = (millionSecond) => {
     const TIMEOUT = Math.random();
     const ms = +millionSecond;

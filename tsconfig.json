@@ -7,7 +7,7 @@
     ],
     "watch": true,
     "noImplicitAny": true,
-    "removeComments": true,
+    "removeComments": false,
     "preserveConstEnums": true,
     "declaration": true,
     "outDir": "./dist",
